@@ -108,8 +108,9 @@ tp-yt-paper-toast {
 /* Others */
 
 span.ytp-caption-segment {
-	font-family: serif !important;
+	color: white !important;
+	font-family: sans-serif !important;
 	font-size: 2rem !important;
 	background: none !important;
-	text-shadow: 0 0 2px black;
+	text-shadow: 0 0 5px black;
 }

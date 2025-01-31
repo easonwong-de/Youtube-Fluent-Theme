@@ -1,24 +1,25 @@
-let guide = document.querySelector("#guide");
-let container = document.querySelector("#contentContainer");
-let button = document.querySelector("#guide-button");
+const guide = document.querySelector("#guide");
+const title = document.querySelector("title");
+const container = document.querySelector("#contentContainer");
+const guideButton = document.querySelector("#guide-button");
 
-//Hides nav bar when loaded
+// Hides nav bar when loaded
 
 guide.removeAttribute("guide-persistent-and-visible");
 guide.removeAttribute("opened");
 guide.setAttribute("mini-guide-visible", "");
 container.removeAttribute("opened");
 
-//Allow transitions to play
+// Allows transitions to play
 
-button.addEventListener("click", () => guide.setAttribute("reveal-nav-bar", ""));
+guideButton.addEventListener("click", () => guide.setAttribute("reveal-nav-bar", ""));
 
-//Re-arrange thumbnails
+// Re-arranges thumbnails
 
 document.addEventListener("afterscriptexecute", () => window.dispatchEvent(new Event("resize")));
 
-//When URL changes, hide nav bar
+// When URL changes, hides nav bar
 
-new MutationObserver((mutations) => {
-	if (container.hasAttribute("opened")) button.click();
-}).observe(document.querySelector("title"), { childList: true });
+new MutationObserver(() => {
+	if (container.hasAttribute("opened")) guideButton.click();
+}).observe(title, { childList: true });
