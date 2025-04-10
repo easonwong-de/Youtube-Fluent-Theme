@@ -1,4 +1,4 @@
-/* This CSS only hides the navbar */
+/* Hides the navbar */
 
 ytd-page-manager.ytd-app {
 	margin-left: 0 !important;
@@ -27,8 +27,24 @@ tp-yt-app-drawer#guide {
 	transition: transform 200ms cubic-bezier(0, 0.8, 0.2, 1) !important;
 }
 
+/* Shows the navbar */
+
+tp-yt-app-drawer#guide[opened][reveal-nav-bar] #scrim.tp-yt-app-drawer {
+	opacity: 1 !important;
+}
+
 *[reveal-nav-bar] #contentContainer.tp-yt-app-drawer[opened] {
 	transform: translateX(0) !important;
+}
+
+/* Navbar styling */
+
+ytd-app {
+	--app-drawer-width: 340px !important;
+}
+
+ytd-guide-renderer.ytd-app {
+	width: var(--app-drawer-width, 256px) !important;
 }
 
 div#scrim,
@@ -39,21 +55,40 @@ div#scrim,
 	backdrop-filter: blur(5px) !important;
 }
 
-tp-yt-app-drawer#guide[opened][reveal-nav-bar] #scrim.tp-yt-app-drawer {
-	opacity: 1 !important;
-}
-
 #guide-button.ytd-app:hover {
 	background-color: var(--yt-spec-10-percent-layer) !important;
 	border-radius: 24px !important;
 }
 
-/* Add-on (extension) related */
+/* Fixes video grid */
 
-/* Age Restriction Bypass Badge */
+#contents.ytd-rich-grid-renderer {
+	margin-left: calc(var(--ytd-rich-grid-item-margin) / 2 + var(--ytd-rich-grid-gutter-margin)) !important;
+}
+
+ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column] {
+	margin-left: calc(var(--ytd-rich-grid-item-margin) / 2) !important;
+}
+
+#content.ytd-rich-section-renderer {
+	margin-left: calc(var(--ytd-rich-grid-item-margin) / 2) !important;
+}
+
+/* Caption styling */
+
+span.ytp-caption-segment {
+	color: white !important;
+	font-family: sans-serif !important;
+	font-size: 2rem !important;
+	background: none !important;
+	text-shadow: 0 0 5px black;
+}
+
+/* Age Restriction Bypass popup */
 
 tp-yt-paper-toast {
 	background: rgba(50, 50, 50, 0.5) !important;
+	color: currentColor !important;
 	backdrop-filter: blur(25px);
 	-webkit-backdrop-filter: blur(25px);
 	border-radius: 10px !important;
@@ -103,14 +138,4 @@ tp-yt-paper-toast {
 #efyt-controls-button svg,
 .ytp-efyt-button svg {
 	max-height: 40px !important;
-}
-
-/* Others */
-
-span.ytp-caption-segment {
-	color: white !important;
-	font-family: sans-serif !important;
-	font-size: 2rem !important;
-	background: none !important;
-	text-shadow: 0 0 5px black;
 }
