@@ -25,6 +25,8 @@ tp-yt-app-drawer#guide {
 	width: var(--app-drawer-width, 256px) !important;
 	transform: translateX(-100%) !important;
 	transition: transform 200ms cubic-bezier(0, 0.8, 0.2, 1) !important;
+	background-color: var(--yt-frosted-glass-desktop);
+	backdrop-filter: blur(48px);
 }
 
 /* Shows the navbar */
@@ -53,6 +55,8 @@ div#scrim,
 	transition-duration: 200ms !important;
 	transition-timing-function: cubic-bezier(0, 0.8, 0.2, 1) !important;
 	backdrop-filter: blur(5px) !important;
+	background-color: transparent !important;
+	left: var(--app-drawer-width, 256px) !important;
 }
 
 #guide-button.ytd-app:hover {
