@@ -96,7 +96,7 @@ span.ytp-caption-segment {
 
 tp-yt-paper-toast {
 	background: rgba(50, 50, 50, 0.5) !important;
-	color: currentColor !important;
+	color: var(--yt-spec-text-primary) !important;
 	backdrop-filter: blur(25px);
 	-webkit-backdrop-filter: blur(25px);
 	border-radius: 10px !important;
