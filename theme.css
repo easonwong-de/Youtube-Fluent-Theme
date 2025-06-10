@@ -53,7 +53,7 @@ ytd-guide-entry-renderer {
 	width: 100% !important;
 }
 
-div#scrim,
+#scrim,
 #scrim.tp-yt-app-drawer {
 	transition-property: opacity, backdrop-filter !important;
 	transition-duration: 200ms !important;
@@ -90,9 +90,9 @@ ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column] {
 	--ytd-rich-grid-items-per-row: 5 !important;
 }
 
-/* Caption styling */
+/* Caption & text pop-up styling */
 
-span.ytp-caption-segment {
+.ytp-caption-segment {
 	color: white !important;
 	font-family: sans-serif !important;
 	font-size: 2rem !important;
@@ -100,9 +100,10 @@ span.ytp-caption-segment {
 	text-shadow: 0 0 5px black;
 }
 
-/* Age Restriction Bypass popup */
-
-tp-yt-paper-toast {
+.tp-yt-paper-toast,
+tp-yt-paper-toast,
+#text.yt-notification-action-renderer,
+#sub-text.yt-notification-action-renderer {
 	background: rgba(50, 50, 50, 0.5) !important;
 	color: var(--yt-spec-text-primary) !important;
 	backdrop-filter: blur(25px);
