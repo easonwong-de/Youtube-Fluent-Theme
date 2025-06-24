@@ -86,7 +86,8 @@ ytd-rich-item-renderer[rendered-from-rich-grid][is-in-first-column] {
 	padding-bottom: 24px !important;
 }
 
-.ytd-rich-grid-renderer {
+.ytd-rich-grid-renderer,
+.ytd-rich-shelf-renderer {
 	--ytd-rich-grid-items-per-row: 5 !important;
 }
 
