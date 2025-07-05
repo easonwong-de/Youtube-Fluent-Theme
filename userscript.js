@@ -4,6 +4,7 @@
 // @version      1.0
 // @description  Removes YouTube's mini sidebar
 // @match        https://www.youtube.com/*
+// @icon         https://raw.githubusercontent.com/dheereshagrwal/coloured-icons/refs/heads/master/public/logos/social%20media/youtube/youtube.svg
 // @grant        none
 // ==/UserScript==
 
